@@ -1,6 +1,4 @@
-========================================================
 STEPS TO FOLLOW FOR COMPILATION
-========================================================
 
 1. open the soln file in VS2017(or above might also work), and go to [Build->Build Solution] to build the solution
 [flatbuffer is a header only dependency and has been included with the pkg]
