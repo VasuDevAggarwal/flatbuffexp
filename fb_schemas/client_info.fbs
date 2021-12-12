@@ -1,0 +1,39 @@
+namespace Aargo;
+
+enum WeightUnit: byte { Kg = 0 }
+
+enum AgeUnit: byte { Years = 0 }
+
+enum Gender: byte { Male = 0, Female = 1 }
+
+table WeightT {
+	value:float;
+	unit:WeightUnit;
+}
+
+table AgeT {
+	value:float;
+	unit:AgeUnit;
+}
+
+table Person {
+	name:string;
+	age:AgeT;
+	weight:WeightT;
+	gender:Gender;
+}
+
+table Group {
+	name:string;
+	avg_age:AgeT;
+	avg_weight:WeightT;
+	list_names:[string];
+}
+
+union Clientinfo { Person, Group }
+
+table ClientInfosT {
+	client_infos:[Clientinfo];
+}
+
+root_type ClientInfosT;
